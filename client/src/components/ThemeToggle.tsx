@@ -6,12 +6,6 @@ import { useEffect } from "react";
 export default function ThemeToggle({ className = "" }: { className?: string }) {
   const { theme, toggleTheme } = useTheme();
 
-  // Add debug logging
-  useEffect(() => {
-    console.log("Current theme:", theme);
-    console.log("Document class:", document.documentElement.classList.contains("dark") ? "dark" : "light");
-  }, [theme]);
-
   return (
     <Button
       variant="ghost"
@@ -21,7 +15,7 @@ export default function ThemeToggle({ className = "" }: { className?: string }) 
       aria-label="Toggle theme"
     >
       {theme === "dark" ? (
-        <Moon className="h-5 w-5 text-gray-300" />
+        <Moon className="h-5 w-5 text-muted-foreground" />
       ) : (
         <Sun className="h-5 w-5 text-amber-500" />
       )}

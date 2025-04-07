@@ -10,7 +10,7 @@ export default function HeroSection() {
     <section
       id="home"
       ref={ref as React.RefObject<HTMLElement>}
-      className={`min-h-screen flex items-center pt-20 pb-16 opacity-0 transform translate-y-5 transition-all duration-1000 ease-out ${
+      className={`min-h-screen flex items-center pt-20 pb-16 opacity-0 transform translate-y-5 transition-all duration-1000 ease-out bg-section-light ${
         isVisible ? "opacity-100 translate-y-0" : ""
       }`}
     >
@@ -20,16 +20,16 @@ export default function HeroSection() {
             <div className="text-sm text-primary font-medium mb-2 tracking-wider">
               ANDROID & UNITY DEVELOPER
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-inter mb-4 text-gray-900 dark:text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-inter mb-4 text-foreground">
               Hello, I'm <span className="text-primary">Prajyot</span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-lg">
+            <p className="text-xl text-foreground/70 mb-8 max-w-lg">
               A passionate software developer specializing in Android development and Unity game creation with a strong eye for UI/UX design.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary-600 text-white"
+                className="bg-primary hover:bg-primary-hover text-white"
                 asChild
               >
                 <a href="#projects">View My Work</a>
@@ -37,7 +37,7 @@ export default function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="border-border text-foreground hover:bg-muted"
                 asChild
               >
                 <a href="#contact">Get In Touch</a>
@@ -49,7 +49,7 @@ export default function HeroSection() {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-xl">
                 <svg
-                  className="w-full h-full text-gray-300 dark:text-gray-700"
+                  className="w-full h-full text-muted-foreground"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -61,7 +61,7 @@ export default function HeroSection() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.5, type: "spring" }}
-                className="absolute -bottom-4 -right-4 bg-white dark:bg-darkcard p-3 rounded-full shadow-lg"
+                className="absolute -bottom-4 -right-4 bg-card p-3 rounded-full shadow-lg"
               >
                 <FaAndroid className="text-3xl text-primary" />
               </motion.div>
@@ -70,7 +70,7 @@ export default function HeroSection() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.7, type: "spring" }}
-                className="absolute -top-4 -left-4 bg-white dark:bg-darkcard p-3 rounded-full shadow-lg"
+                className="absolute -top-4 -left-4 bg-card p-3 rounded-full shadow-lg"
               >
                 <FaUnity className="text-3xl text-primary" />
               </motion.div>
@@ -85,7 +85,7 @@ export default function HeroSection() {
           >
             <a
               href="#about"
-              className="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
             >
               <FaChevronDown className="text-2xl" />
             </a>

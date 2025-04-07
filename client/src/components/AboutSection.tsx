@@ -28,13 +28,13 @@ export default function AboutSection() {
     <section
       id="about"
       ref={ref as React.RefObject<HTMLElement>}
-      className={`py-20 opacity-0 transform translate-y-5 transition-all duration-1000 ease-out ${
+      className={`py-20 opacity-0 transform translate-y-5 transition-all duration-1000 ease-out bg-section-light-alt ${
         isVisible ? "opacity-100 translate-y-0" : ""
       }`}
     >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-inter text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-inter text-foreground mb-4">
             About Me
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
@@ -42,25 +42,25 @@ export default function AboutSection() {
         
         <div className="flex flex-col md:flex-row gap-12">
           <div className="md:w-1/2">
-            <h3 className="text-2xl font-bold font-inter text-gray-900 dark:text-white mb-4">
+            <h3 className="text-2xl font-bold font-inter text-foreground mb-4">
               Who I Am
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
+            <p className="text-foreground/70 mb-4">
               I'm a 3rd-year university student passionate about creating beautiful, functional applications. I specialize in Android development, Unity game design, and UI/UX principles.
             </p>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
+            <p className="text-foreground/70 mb-6">
               With a strong foundation in both development and design, I bring a unique perspective to projects that balances technical requirements with exceptional user experiences.
             </p>
             
-            <h3 className="text-2xl font-bold font-inter text-gray-900 dark:text-white mb-4">
+            <h3 className="text-2xl font-bold font-inter text-foreground mb-4">
               Education
             </h3>
             <div className="mb-4">
-              <div className="font-medium text-gray-900 dark:text-white">
+              <div className="font-medium text-foreground">
                 Bachelor of Computer Science
               </div>
               <div className="text-primary">University Name, 2021 - Present</div>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
+              <p className="text-foreground/70 text-sm mt-1">
                 Specializing in Mobile Application Development and Game Design
               </p>
             </div>
@@ -69,7 +69,7 @@ export default function AboutSection() {
               {techSkills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-primary bg-opacity-10 text-primary rounded-full text-sm"
+                  className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
                 >
                   {skill}
                 </span>
@@ -78,7 +78,7 @@ export default function AboutSection() {
           </div>
           
           <div className="md:w-1/2">
-            <h3 className="text-2xl font-bold font-inter text-gray-900 dark:text-white mb-6">
+            <h3 className="text-2xl font-bold font-inter text-foreground mb-6">
               My Skills
             </h3>
             

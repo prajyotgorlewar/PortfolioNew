@@ -31,41 +31,41 @@ export default function ContactSection() {
     <section
       id="contact"
       ref={ref as React.RefObject<HTMLElement>}
-      className={`py-20 bg-gray-50 dark:bg-darkcard opacity-0 transform translate-y-5 transition-all duration-1000 ease-out ${
+      className={`py-20 bg-section-light-alt opacity-0 transform translate-y-5 transition-all duration-1000 ease-out ${
         isVisible ? "opacity-100 translate-y-0" : ""
       }`}
     >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-inter text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-inter text-foreground mb-4">
             Get In Touch
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
-          <p className="text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
+          <p className="text-foreground/70 mt-4 max-w-2xl mx-auto">
             Interested in working together? Let's connect and discuss your project!
           </p>
         </div>
         
         <div className="flex flex-col md:flex-row gap-12">
           <div className="md:w-1/2">
-            <h3 className="text-2xl font-bold font-inter text-gray-900 dark:text-white mb-6">
+            <h3 className="text-2xl font-bold font-inter text-foreground mb-6">
               Contact Information
             </h3>
             
             <div className="mb-6">
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
+              <p className="text-foreground/70 mb-6">
                 Feel free to reach out to me through any of the following channels. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
               
               <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
                   <FaEnvelope className="text-primary" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Email</div>
+                  <div className="text-sm text-muted-foreground">Email</div>
                   <a
                     href="mailto:prajyot@example.com"
-                    className="text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors"
+                    className="text-foreground hover:text-primary transition-colors"
                   >
                     prajyot@example.com
                   </a>
@@ -73,17 +73,17 @@ export default function ContactSection() {
               </div>
               
               <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
                   <FaMapMarkerAlt className="text-primary" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Location</div>
-                  <span className="text-gray-900 dark:text-white">Mumbai, India</span>
+                  <div className="text-sm text-muted-foreground">Location</div>
+                  <span className="text-foreground">Mumbai, India</span>
                 </div>
               </div>
             </div>
             
-            <h3 className="text-xl font-bold font-inter text-gray-900 dark:text-white mb-4">
+            <h3 className="text-xl font-bold font-inter text-foreground mb-4">
               Social Profiles
             </h3>
             
@@ -118,14 +118,14 @@ export default function ContactSection() {
           <div className="md:w-1/2">
             <form
               onSubmit={handleSubmit}
-              className="bg-white dark:bg-darkbg p-8 rounded-xl shadow-lg"
+              className="bg-card p-8 rounded-xl shadow-lg"
             >
-              <h3 className="text-2xl font-bold font-inter text-gray-900 dark:text-white mb-6">
+              <h3 className="text-2xl font-bold font-inter text-card-foreground mb-6">
                 Send Me a Message
               </h3>
               
               <div className="mb-4">
-                <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="name" className="block text-card-foreground/80 mb-2">
                   Name
                 </label>
                 <Input
@@ -134,13 +134,13 @@ export default function ContactSection() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your name"
-                  className="border-gray-300 dark:border-gray-700 focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white"
+                  className="border-input focus:ring-primary focus:border-primary"
                   required
                 />
               </div>
               
               <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="email" className="block text-card-foreground/80 mb-2">
                   Email
                 </label>
                 <Input
@@ -149,13 +149,13 @@ export default function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Your email"
-                  className="border-gray-300 dark:border-gray-700 focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white"
+                  className="border-input focus:ring-primary focus:border-primary"
                   required
                 />
               </div>
               
               <div className="mb-4">
-                <label htmlFor="subject" className="block text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="subject" className="block text-card-foreground/80 mb-2">
                   Subject
                 </label>
                 <Input
@@ -164,13 +164,13 @@ export default function ContactSection() {
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="Subject"
-                  className="border-gray-300 dark:border-gray-700 focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white"
+                  className="border-input focus:ring-primary focus:border-primary"
                   required
                 />
               </div>
               
               <div className="mb-6">
-                <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-card-foreground/80 mb-2">
                   Message
                 </label>
                 <Textarea
@@ -179,7 +179,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   rows={5}
                   placeholder="Your message"
-                  className="w-full border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-800 dark:text-white"
+                  className="w-full border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   required
                 />
               </div>

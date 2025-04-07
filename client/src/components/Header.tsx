@@ -41,10 +41,10 @@ export default function Header() {
   }, [activeSection]);
 
   return (
-    <header className="fixed w-full z-50 transition-colors duration-300 bg-white/80 dark:bg-darkbg/80 backdrop-blur-md">
+    <header className="fixed w-full z-50 transition-colors duration-300 bg-background/80 backdrop-blur-md border-b">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold font-inter text-gray-900 dark:text-white">
+          <a href="#home" className="text-2xl font-bold font-inter text-foreground">
             <span className="text-primary">Prajyot</span>
           </a>
           
@@ -56,7 +56,7 @@ export default function Header() {
                 className={`nav-link ${
                   activeSection === link.href.substring(1)
                     ? "text-primary"
-                    : "text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
+                    : "text-foreground/80 hover:text-primary"
                 } transition-colors`}
               >
                 {link.label}
@@ -73,9 +73,9 @@ export default function Header() {
             onClick={toggleMobileMenu}
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+              <X className="h-6 w-6 text-foreground/80" />
             ) : (
-              <Menu className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+              <Menu className="h-6 w-6 text-foreground/80" />
             )}
           </Button>
         </div>
@@ -91,7 +91,7 @@ export default function Header() {
                   className={`nav-link ${
                     activeSection === link.href.substring(1)
                       ? "text-primary"
-                      : "text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
+                      : "text-foreground/80 hover:text-primary"
                   } transition-colors`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -100,7 +100,7 @@ export default function Header() {
               ))}
               
               <div className="flex items-center">
-                <span className="text-gray-700 dark:text-gray-300 mr-3">Dark Mode</span>
+                <span className="text-foreground/80 mr-3">Dark Mode</span>
                 <ThemeToggle />
               </div>
             </div>

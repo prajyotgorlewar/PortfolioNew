@@ -35,18 +35,11 @@ function Router() {
 }
 
 function App() {
-  const { theme } = useTheme();
-  
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
+  // No need to apply theme class here as it's handled in useTheme hook
+  useTheme();
 
   return (
-    <div className="font-roboto transition-colors duration-300 dark:bg-darkbg bg-lightbg min-h-screen">
+    <div className="font-roboto transition-colors duration-300 bg-background text-foreground min-h-screen">
       <Router />
       <Toaster />
     </div>

@@ -45,10 +45,10 @@ export default function SkillBar({ skill, percentage, delay = 0 }: SkillBarProps
   return (
     <div className="mb-6" ref={ref}>
       <div className="flex justify-between mb-1">
-        <span className="text-gray-700 dark:text-gray-300">{skill}</span>
+        <span className="text-foreground/80">{skill}</span>
         <span className="text-primary">{percentage}%</span>
       </div>
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+      <div className="w-full bg-muted rounded-full h-2.5">
         <div
           className="bg-primary h-2.5 rounded-full transition-all duration-1000 ease-out"
           style={{ width: `${width}%` }}
