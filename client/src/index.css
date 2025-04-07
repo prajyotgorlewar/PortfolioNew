@@ -10,4 +10,22 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+  
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: 24 100% 50%;
+    --primary-hover: 24 100% 45%;
+    --lightbg: 0 0% 98%;
+    --darkbg: 220 26% 14%;
+    --darkcard: 215 28% 17%;
+  }
+
+  .dark {
+    --background: 220 26% 14%;
+    --foreground: 210 20% 98%;
+    --lightbg: 0 0% 98%;
+    --darkbg: 220 26% 14%;
+    --darkcard: 215 28% 17%;
+  }
 }

@@ -4,7 +4,7 @@ import useScrollAnimation from "@/hooks/useScrollAnimation";
 import ProjectCard from "./ProjectCard";
 import { projects } from "@/lib/projects";
 
-type ProjectFilter = "all" | "android" | "unity";
+type ProjectFilter = "all" | "android" | "unity" | "ui";
 
 export default function ProjectsSection() {
   const { ref, isVisible } = useScrollAnimation();
@@ -30,7 +30,7 @@ export default function ProjectsSection() {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
           <p className="text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
-            A showcase of my Android applications and Unity game development projects
+            A showcase of my Android applications, Unity games, and UI/UX designs
           </p>
         </div>
         
@@ -66,6 +66,16 @@ export default function ProjectsSection() {
               onClick={() => setFilter("unity")}
             >
               Unity Games
+            </Button>
+            <Button
+              className={`px-4 py-2 ${
+                filter === "ui"
+                  ? "bg-primary text-white"
+                  : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
+              }`}
+              onClick={() => setFilter("ui")}
+            >
+              UI Designs
             </Button>
           </div>
         </div>

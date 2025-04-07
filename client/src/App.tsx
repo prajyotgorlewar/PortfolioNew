@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
-import UiUxSection from "@/components/UiUxSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import useTheme from "@/hooks/useTheme";
@@ -19,7 +18,6 @@ function Home() {
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
-        <UiUxSection />
         <ContactSection />
       </main>
       <Footer />
