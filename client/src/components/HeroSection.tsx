@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
 import { FaAndroid, FaUnity, FaChevronDown } from "react-icons/fa";
+import { SiFigma } from "react-icons/si";
 
 export default function HeroSection() {
   const { ref, isVisible } = useScrollAnimation();
@@ -10,7 +11,7 @@ export default function HeroSection() {
     <section
       id="home"
       ref={ref as React.RefObject<HTMLElement>}
-      className={`min-h-screen flex items-center pt-20 pb-16 opacity-0 transform translate-y-5 transition-all duration-1000 ease-out bg-section-light ${
+      className={`min-h-screen flex items-center pt-20 pb-16 opacity-0 transform translate-y-5 transition-all duration-1000 ease-out bg-background dark:bg-slate-950 ${
         isVisible ? "opacity-100 translate-y-0" : ""
       }`}
     >
@@ -73,6 +74,15 @@ export default function HeroSection() {
                 className="absolute -top-4 -left-4 bg-card p-3 rounded-full shadow-lg"
               >
                 <FaUnity className="text-3xl text-primary" />
+              </motion.div>
+              
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.9, type: "spring" }}
+                className="absolute top-1/2 -left-8 bg-card p-3 rounded-full shadow-lg"
+              >
+                <SiFigma className="text-3xl text-primary" />
               </motion.div>
             </div>
           </div>
