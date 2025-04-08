@@ -3,6 +3,7 @@ import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
 import { FaAndroid, FaUnity, FaChevronDown } from "react-icons/fa";
 import { SiFigma } from "react-icons/si";
+import AnimatedBackground from "./BackgroundAnimation";
 
 export default function HeroSection() {
   const { ref, isVisible } = useScrollAnimation();
@@ -11,11 +12,12 @@ export default function HeroSection() {
     <section
       id="home"
       ref={ref as React.RefObject<HTMLElement>}
-      className={`min-h-screen flex items-center pt-20 pb-16 opacity-0 transform translate-y-5 transition-all duration-1000 ease-out bg-background dark:bg-slate-950 ${
+      className={`min-h-screen flex items-center pt-20 pb-16 opacity-0 transform translate-y-5 transition-all duration-1000 ease-out bg-background dark:bg-slate-950 relative overflow-hidden ${
         isVisible ? "opacity-100 translate-y-0" : ""
       }`}
     >
-      <div className="container mx-auto px-6">
+      <AnimatedBackground type="particles" count={20} color="primary" />
+      <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <div className="text-sm text-primary font-medium mb-2 tracking-wider">

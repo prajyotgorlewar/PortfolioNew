@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import ProjectCard from "./ProjectCard";
 import { projects } from "@/lib/projects";
+import AnimatedBackground from "./BackgroundAnimation";
 
 type ProjectFilter = "all" | "android" | "unity" | "ui";
 
@@ -19,11 +20,12 @@ export default function ProjectsSection() {
     <section
       id="projects"
       ref={ref as React.RefObject<HTMLElement>}
-      className={`py-20 bg-section-light opacity-0 transform translate-y-5 transition-all duration-1000 ease-out ${
+      className={`py-20 bg-background dark:bg-slate-950 opacity-0 transform translate-y-5 transition-all duration-1000 ease-out relative overflow-hidden ${
         isVisible ? "opacity-100 translate-y-0" : ""
       }`}
     >
-      <div className="container mx-auto px-6">
+      <AnimatedBackground type="grid" color="primary" />
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-inter text-foreground mb-4">
             My Projects
