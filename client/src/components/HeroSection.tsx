@@ -3,7 +3,6 @@ import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
 import { FaAndroid, FaUnity, FaChevronDown } from "react-icons/fa";
 import { SiFigma } from "react-icons/si";
-import AnimatedBackground from "./BackgroundAnimation";
 
 export default function HeroSection() {
   const { ref, isVisible } = useScrollAnimation();
@@ -16,25 +15,45 @@ export default function HeroSection() {
         isVisible ? "opacity-100 translate-y-0" : ""
       }`}
     >
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <AnimatedBackground type="particles" count={8} color="primary" />
-      </div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
-            <div className="text-sm text-primary font-medium mb-2 tracking-wider">
-              ANDROID & UNITY DEVELOPER
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-inter mb-4 text-foreground">
-              Hello, I'm <span className="text-primary">Prajyot</span>
-            </h1>
-            <p className="text-xl text-foreground/70 mb-8 max-w-lg">
+            <motion.h1 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold font-poppins mb-4 text-foreground"
+            >
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                Hello, I'm{" "}
+              </motion.span>
+              <motion.span 
+                className="text-primary"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+              >
+                Prajyot
+              </motion.span>
+            </motion.h1>
+            <motion.p 
+              className="text-xl text-foreground/70 mb-8 max-w-lg font-poppins"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 0.5 }}
+            >
               A passionate software developer specializing in Android development and Unity game creation with a strong eye for UI/UX design.
-            </p>
-            <div className="flex flex-wrap gap-4">
+            </motion.p>
+            <motion.div 
+              className="flex flex-wrap gap-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5, duration: 0.5 }}
+            >
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary-hover text-white"
+                className="bg-primary hover:bg-primary-hover text-white font-poppins"
                 asChild
               >
                 <a href="#projects">View My Work</a>
@@ -42,12 +61,12 @@ export default function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-border text-foreground hover:bg-muted"
+                className="border-border text-foreground hover:bg-muted font-poppins"
                 asChild
               >
                 <a href="#contact">Get In Touch</a>
               </Button>
-            </div>
+            </motion.div>
           </div>
           
           <div className="md:w-1/2 flex justify-center">
@@ -84,7 +103,7 @@ export default function HeroSection() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.9, type: "spring" }}
-                className="absolute top-1/2 -left-8 bg-card p-3 rounded-full shadow-lg"
+                className="absolute -bottom-4 right-16 bg-card p-3 rounded-full shadow-lg"
               >
                 <SiFigma className="text-3xl text-primary" />
               </motion.div>

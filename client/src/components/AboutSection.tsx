@@ -1,6 +1,5 @@
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import SkillBar from "./SkillBar";
-import AnimatedBackground from "./BackgroundAnimation";
 
 export default function AboutSection() {
   const { ref, isVisible } = useScrollAnimation();
@@ -33,10 +32,9 @@ export default function AboutSection() {
         isVisible ? "opacity-100 translate-y-0" : ""
       }`}
     >
-      <AnimatedBackground type="wave" color="primary" />
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-inter text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-poppins text-foreground mb-4">
             About Me
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
@@ -44,7 +42,7 @@ export default function AboutSection() {
         
         <div className="flex flex-col md:flex-row gap-12">
           <div className="md:w-1/2">
-            <h3 className="text-2xl font-bold font-inter text-foreground mb-4">
+            <h3 className="text-2xl font-bold font-poppins text-foreground mb-4">
               Who I Am
             </h3>
             <p className="text-foreground/70 mb-4">
@@ -54,7 +52,7 @@ export default function AboutSection() {
               With a strong foundation in both development and design, I bring a unique perspective to projects that balances technical requirements with exceptional user experiences.
             </p>
             
-            <h3 className="text-2xl font-bold font-inter text-foreground mb-4">
+            <h3 className="text-2xl font-bold font-poppins text-foreground mb-4">
               Education
             </h3>
             <div className="mb-4">
@@ -80,7 +78,7 @@ export default function AboutSection() {
           </div>
           
           <div className="md:w-1/2">
-            <h3 className="text-2xl font-bold font-inter text-foreground mb-6">
+            <h3 className="text-2xl font-bold font-poppins text-foreground mb-6">
               My Skills
             </h3>
             
