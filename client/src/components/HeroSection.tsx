@@ -103,7 +103,7 @@ export default function HeroSection() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.9, type: "spring" }}
-                className="absolute -bottom-4 right-16 bg-card p-3 rounded-full shadow-lg"
+                className="absolute -top-4 -right-4 bg-card p-3 rounded-full shadow-lg"
               >
                 <SiFigma className="text-3xl text-primary" />
               </motion.div>

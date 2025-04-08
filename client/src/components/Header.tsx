@@ -44,8 +44,8 @@ export default function Header() {
     <header className="fixed w-full z-50 transition-colors duration-300 bg-background/80 backdrop-blur-md border-b">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold font-inter text-foreground">
-            <span className="text-primary">Prajyot</span>
+          <a href="#home" className="text-2xl font-bold font-poppins text-foreground">
+            PORTFOLIO
           </a>
           
           <div className="hidden md:flex space-x-8 items-center">
