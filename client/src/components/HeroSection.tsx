@@ -16,7 +16,9 @@ export default function HeroSection() {
         isVisible ? "opacity-100 translate-y-0" : ""
       }`}
     >
-      <AnimatedBackground type="particles" count={20} color="primary" />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <AnimatedBackground type="particles" count={8} color="primary" />
+      </div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">

@@ -40,15 +40,21 @@ function ParticlesAnimation({ className, count, color }: {
   count: number;
   color: string;
 }) {
-  // Generate random particles
-  const particles = Array.from({ length: count }).map(() => ({
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    size: Math.random() * 0.5 + 0.5,
-    speedX: (Math.random() - 0.5) * 0.3,
-    speedY: (Math.random() - 0.5) * 0.3,
-    opacity: Math.random() * 0.5 + 0.1
-  }));
+  // Generate random particles - larger size, lower opacity, positioned more to the right side
+  const particles = Array.from({ length: count }).map(() => {
+    // For hero section, position particles more to the right side (50-100% of width)
+    // and avoid top area (15-100% of height) to keep text area clear
+    const x = Math.random() * 50 + 50; // Position in right half
+    const y = Math.random() * 85 + 15; // Avoid top area for text
+    return {
+      x,
+      y,
+      size: Math.random() * 1.5 + 1.0, // Larger size (1.0-2.5rem)
+      speedX: (Math.random() - 0.5) * 0.2, // Slightly slower
+      speedY: (Math.random() - 0.5) * 0.2, // Slightly slower
+      opacity: Math.random() * 0.15 + 0.05 // Lower opacity (0.05-0.2)
+    };
+  });
 
   return (
     <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
