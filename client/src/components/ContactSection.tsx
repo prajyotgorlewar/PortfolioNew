@@ -10,7 +10,6 @@ export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
     message: ""
   });
 
@@ -24,7 +23,7 @@ export default function ContactSection() {
     // Form submission logic would go here
     console.log("Form data:", formData);
     // Reset form after submission
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
@@ -37,7 +36,7 @@ export default function ContactSection() {
     >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-inter text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-poppins text-foreground mb-4">
             Get In Touch
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
@@ -48,7 +47,7 @@ export default function ContactSection() {
         
         <div className="flex flex-col md:flex-row gap-12">
           <div className="md:w-1/2">
-            <h3 className="text-2xl font-bold font-inter text-foreground mb-6">
+            <h3 className="text-2xl font-bold font-poppins text-foreground mb-6">
               Contact Information
             </h3>
             
@@ -83,7 +82,7 @@ export default function ContactSection() {
               </div>
             </div>
             
-            <h3 className="text-xl font-bold font-inter text-foreground mb-4">
+            <h3 className="text-xl font-bold font-poppins text-foreground mb-4">
               Social Profiles
             </h3>
             
@@ -120,7 +119,7 @@ export default function ContactSection() {
               onSubmit={handleSubmit}
               className="bg-card p-8 rounded-xl shadow-lg"
             >
-              <h3 className="text-2xl font-bold font-inter text-card-foreground mb-6">
+              <h3 className="text-2xl font-bold font-poppins text-card-foreground mb-6">
                 Send Me a Message
               </h3>
               
@@ -154,21 +153,6 @@ export default function ContactSection() {
                 />
               </div>
               
-              <div className="mb-4">
-                <label htmlFor="subject" className="block text-card-foreground/80 mb-2">
-                  Subject
-                </label>
-                <Input
-                  type="text"
-                  id="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="Subject"
-                  className="border-input focus:ring-primary focus:border-primary"
-                  required
-                />
-              </div>
-              
               <div className="mb-6">
                 <label htmlFor="message" className="block text-card-foreground/80 mb-2">
                   Message
@@ -177,9 +161,9 @@ export default function ContactSection() {
                   id="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={5}
+                  rows={8}
                   placeholder="Your message"
-                  className="w-full border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                   required
                 />
               </div>
