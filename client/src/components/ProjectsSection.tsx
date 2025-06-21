@@ -9,11 +9,14 @@ type ProjectFilter = "all" | "android" | "unity" | "ui";
 export default function ProjectsSection() {
   const { ref, isVisible } = useScrollAnimation();
   const [filter, setFilter] = useState<ProjectFilter>("all");
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   const filteredProjects = 
     filter === "all" 
       ? projects 
       : projects.filter(project => project.category === filter);
+
+  const displayedProjects = showAllProjects ? filteredProjects : filteredProjects.slice(0, 3);
 
   return (
     <section
@@ -43,7 +46,10 @@ export default function ProjectsSection() {
                   ? "bg-primary text-white"
                   : "bg-muted text-muted-foreground hover:bg-muted/80"
               }`}
-              onClick={() => setFilter("all")}
+              onClick={() => {
+                setFilter("all");
+                setShowAllProjects(false);
+              }}
             >
               All
             </Button>
@@ -53,7 +59,10 @@ export default function ProjectsSection() {
                   ? "bg-primary text-white"
                   : "bg-muted text-muted-foreground hover:bg-muted/80"
               }`}
-              onClick={() => setFilter("android")}
+              onClick={() => {
+                setFilter("android");
+                setShowAllProjects(false);
+              }}
             >
               Android Apps
             </Button>
@@ -63,7 +72,10 @@ export default function ProjectsSection() {
                   ? "bg-primary text-white"
                   : "bg-muted text-muted-foreground hover:bg-muted/80"
               }`}
-              onClick={() => setFilter("unity")}
+              onClick={() => {
+                setFilter("unity");
+                setShowAllProjects(false);
+              }}
             >
               Unity Games
             </Button>
@@ -73,7 +85,10 @@ export default function ProjectsSection() {
                   ? "bg-primary text-white"
                   : "bg-muted text-muted-foreground hover:bg-muted/80"
               }`}
-              onClick={() => setFilter("ui")}
+              onClick={() => {
+                setFilter("ui");
+                setShowAllProjects(false);
+              }}
             >
               UI Designs
             </Button>
@@ -82,20 +97,22 @@ export default function ProjectsSection() {
         
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
+          {displayedProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
         
-        <div className="text-center mt-12">
-          <Button
-            variant="outline"
-            className="px-8 py-3 border text-foreground hover:bg-primary hover:text-white hover:border-primary transition-colors"
-            asChild
-          >
-            <a href="#">View All Projects</a>
-          </Button>
-        </div>
+        {filteredProjects.length > 3 && (
+          <div className="text-center mt-12">
+            <Button
+              variant="outline"
+              className="px-8 py-3 border text-foreground hover:bg-primary hover:text-white hover:border-primary transition-colors"
+              onClick={() => setShowAllProjects(!showAllProjects)}
+            >
+              {showAllProjects ? "Show Less" : `View All Projects (${filteredProjects.length})`}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
