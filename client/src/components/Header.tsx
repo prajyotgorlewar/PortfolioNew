@@ -9,6 +9,7 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
+  { href: "#certificates", label: "Certificates" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -45,11 +46,9 @@ export default function Header() {
     <header className="fixed w-full z-50 transition-colors duration-300 bg-background/80 backdrop-blur-md border-b">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold font-poppins text-foreground">
-            PORTFOLIO
-          </a>
+          <div className="flex-1"></div>
           
-          <div className="hidden md:flex space-x-8 items-center">
+          <div className="hidden md:flex space-x-8 items-center justify-center flex-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -63,22 +62,26 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            
+          </div>
+          
+          <div className="flex-1 flex justify-end">
             <ThemeToggle />
           </div>
           
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={toggleMobileMenu}
-          >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-foreground/80" />
-            ) : (
-              <Menu className="h-6 w-6 text-foreground/80" />
-            )}
-          </Button>
+          <div className="md:hidden flex items-center gap-3">
+            <ThemeToggle />
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleMobileMenu}
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6 text-foreground/80" />
+              ) : (
+                <Menu className="h-6 w-6 text-foreground/80" />
+              )}
+            </Button>
+          </div>
         </div>
         
         {/* Mobile menu */}
@@ -99,11 +102,6 @@ export default function Header() {
                   {link.label}
                 </a>
               ))}
-              
-              <div className="flex items-center">
-                <span className="text-foreground/80 mr-3">Dark Mode</span>
-                <ThemeToggle />
-              </div>
             </div>
           </div>
         )}
