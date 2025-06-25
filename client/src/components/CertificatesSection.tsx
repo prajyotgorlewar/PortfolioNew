@@ -1,7 +1,8 @@
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaCalendarAlt, FaAward } from "react-icons/fa";
-import { SiAndroid, SiUnity, SiFigma, SiGoogle, SiMicrosoft, SiCoursera } from "react-icons/si";
+import { SiSpring, SiUnity, SiFigma, SiGoogle, SiMicrosoft, SiCoursera } from "react-icons/si";
+import { FaCode } from "react-icons/fa";
 
 interface Certificate {
   id: number;
@@ -18,47 +19,23 @@ interface Certificate {
 const certificates: Certificate[] = [
   {
     id: 1,
-    title: "Android Developer Nanodegree",
-    issuer: "Google / Udacity",
-    issueDate: "October 2024",
-    credentialId: "AND-2024-12345",
+    title: "Java Full Stack Development",
+    issuer: "EduSkills",
+    issueDate: "2024",
     verificationUrl: "#",
-    description: "Comprehensive program covering Android app development, UI/UX design, and Google Play Store deployment.",
-    icon: SiAndroid,
-    category: "android"
+    description: "Comprehensive full stack development program covering Java backend development, web technologies, and modern development practices.",
+    icon: FaCode,
+    category: "general"
   },
   {
     id: 2,
-    title: "Unity Certified User: Programmer",
-    issuer: "Unity Technologies",
-    issueDate: "September 2024",
-    credentialId: "UCU-P-2024-67890",
+    title: "C# Programming for Unity Game Development",
+    issuer: "University of Colorado Colorado Springs",
+    issueDate: "2024",
     verificationUrl: "#",
-    description: "Certification demonstrating proficiency in Unity engine programming, game mechanics, and C# scripting.",
+    description: "Specialized course focusing on C# programming fundamentals specifically for Unity game development, covering scripting, game mechanics, and object-oriented programming.",
     icon: SiUnity,
     category: "unity"
-  },
-  {
-    id: 3,
-    title: "UI/UX Design Specialization",
-    issuer: "California Institute of the Arts",
-    issueDate: "August 2024",
-    credentialId: "COURSERA-UX-11223",
-    verificationUrl: "#",
-    description: "Complete specialization covering user research, wireframing, prototyping, and visual design principles.",
-    icon: SiFigma,
-    category: "design"
-  },
-  {
-    id: 4,
-    title: "Google Play Console Basics",
-    issuer: "Google",
-    issueDate: "July 2024",
-    credentialId: "GPC-2024-44556",
-    verificationUrl: "#",
-    description: "Certification covering app publishing, monetization strategies, and Play Console management.",
-    icon: SiGoogle,
-    category: "android"
   }
 ];
 
@@ -114,7 +91,7 @@ export default function CertificatesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {certificates.map((certificate, index) => (
             <motion.div
               key={certificate.id}
