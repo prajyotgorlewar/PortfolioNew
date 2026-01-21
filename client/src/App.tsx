@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Switch, Route } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/Header";
@@ -29,7 +28,7 @@ function Home() {
   );
 }
 
-function Router() {
+function AppRoutes() {
   return (
     <Switch>
       <Route path="/" component={Home} />
@@ -38,16 +37,13 @@ function Router() {
   );
 }
 
-function App() {
-  // No need to apply theme class here as it's handled in useTheme hook
+export default function App() {
   useTheme();
 
   return (
     <div className="font-roboto transition-colors duration-300 bg-background text-foreground min-h-screen">
-      <Router />
+      <AppRoutes />
       <Toaster />
     </div>
   );
 }
-
-export default App;
