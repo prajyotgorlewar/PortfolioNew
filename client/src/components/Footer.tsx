@@ -5,9 +5,9 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left mb-4 md:mb-0">
             <a href="#home" className="text-xl font-bold font-inter">
-              <span className="text-primary">Prajyot</span>
+              <span className="text-primary">Prajyot Gorlewar</span>
             </a>
-            <p className="text-muted-foreground dark:text-gray-400 mt-2">Android & Unity Developer</p>
+            <p className="text-muted-foreground dark:text-gray-400 mt-2">Software & UI Developer</p>
           </div>
           
           <div className="text-center md:text-right">

@@ -16,48 +16,33 @@ interface Experience {
 const experiences: Experience[] = [
   {
     id: 1,
-    title: "Android Developer Intern",
-    company: "Tech Solutions Inc",
+    title: "Software Developer Intern",
+    company: "HHT Technologies",
     location: "Remote",
-    duration: "Jun 2024 - Aug 2024",
+    duration: "May 2025 - Present",
     type: "internship",
     description: [
-      "Developed and maintained Android applications using Kotlin and Java",
-      "Collaborated with cross-functional teams to implement new features",
-      "Optimized app performance and reduced loading times by 30%",
-      "Implemented clean architecture patterns and MVVM design"
+      "Design and engineer robust, reusable frontend modules to improve UI performance, responsiveness, and visual consistency.",
+      "Collaborate within Agile teams on high-impact products, translating design requirements into polished, end-to-end user interfaces.",
+      "Integrate AI-powered workflows into frontend experiences, transforming prototypes into production-ready, user-facing features.",
+      "Refactor legacy UI components into modular, scalable structures, reducing code duplication by 70% and improving maintainability."
     ],
-    technologies: ["Kotlin", "Android Studio", "Firebase", "Room Database", "Retrofit"]
+    technologies: ["React", "Figma", "Python", "MongoDB", "Git" ]
   },
   {
     id: 2,
-    title: "Unity Game Developer",
-    company: "Freelance",
+    title: "UI/UX Design Intern",
+    company: "ADM Education and welfare Society",
     location: "Remote",
-    duration: "Jan 2024 - Present",
-    type: "work",
-    description: [
-      "Created multiple 2D and 3D games using Unity Engine",
-      "Implemented game mechanics, physics, and user interfaces",
-      "Integrated analytics and monetization features",
-      "Published games on Google Play Store with 10K+ downloads"
-    ],
-    technologies: ["Unity", "C#", "Blender", "Photoshop", "Google Play Console"]
-  },
-  {
-    id: 3,
-    title: "UI/UX Design Projects",
-    company: "University & Personal",
-    location: "Local",
-    duration: "Sep 2023 - Present",
-    type: "project",
+    duration: "June 2025 - July 2024",
+    type: "internship",
     description: [
       "Designed user interfaces for mobile applications and websites",
       "Conducted user research and created user personas",
       "Created wireframes, prototypes, and high-fidelity designs",
       "Collaborated with developers to ensure design implementation"
     ],
-    technologies: ["Figma", "Adobe XD", "Photoshop", "Illustrator", "Principle"]
+    technologies: ["Figma", "User Research", "Prototyping", "Wireframing", "User Flows" ]
   }
 ];
 

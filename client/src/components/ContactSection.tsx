@@ -66,7 +66,7 @@ export default function ContactSection() {
                     href="mailto:prajyot@example.com"
                     className="text-foreground hover:text-primary transition-colors"
                   >
-                    prajyot@example.com
+                    prajyotgorlewar@gmail.com
                   </a>
                 </div>
               </div>
@@ -77,7 +77,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Location</div>
-                  <span className="text-foreground">Mumbai, India</span>
+                  <span className="text-foreground">Nagpur, India</span>
                 </div>
               </div>
             </div>
@@ -88,28 +88,16 @@ export default function ContactSection() {
             
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/in/prajyotgorlewar/"
                 className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center transition-transform hover:scale-110"
               >
                 <FaLinkedinIn />
               </a>
               <a
-                href="#"
+                href="https://github.com/prajyotgorlewar"
                 className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center transition-transform hover:scale-110"
               >
                 <FaGithub />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center transition-transform hover:scale-110"
-              >
-                <FaTwitter />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center transition-transform hover:scale-110"
-              >
-                <FaInstagram />
               </a>
             </div>
           </div>

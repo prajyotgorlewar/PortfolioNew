@@ -3,6 +3,7 @@ import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
 import { FaAndroid, FaUnity, FaChevronDown } from "react-icons/fa";
 import { SiFigma } from "react-icons/si";
+import profileImg from "@/assets/profile.jpg";
 
 export default function HeroSection() {
   const { ref, isVisible } = useScrollAnimation();
@@ -20,15 +21,14 @@ export default function HeroSection() {
           <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-xl">
-                <svg
-                  className="w-full h-full text-muted-foreground"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M12 14.016c2.672 0 8.016 1.359 8.016 4.031v1.969h-16.031v-1.969c0-2.672 5.344-4.031 8.016-4.031zM12 12c-2.203 0-3.984-1.781-3.984-3.984s1.781-4.031 3.984-4.031 4.031 1.828 4.031 4.031-1.828 3.984-4.031 3.984z" />
-                </svg>
+                <img
+                  src={profileImg}
+                  alt="Profile"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              
+
+            
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
@@ -84,7 +84,7 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
             >
-              A passionate software developer specializing in Android development and Unity game creation with a strong eye for UI/UX design.
+              UI Designer & Developer specializing in visually polished interfaces and interactive design systems, with additional experience in Android & Unity app development and full-stack web development.
             </motion.p>
             <motion.div 
               className="flex flex-wrap gap-4 justify-center md:justify-start"

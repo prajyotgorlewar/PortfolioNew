@@ -1,7 +1,7 @@
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaCalendarAlt, FaAward } from "react-icons/fa";
-import { SiSpring, SiUnity, SiFigma, SiGoogle, SiMicrosoft, SiCoursera } from "react-icons/si";
+import { SiSpring, SiUnity, SiFigma, SiGoogle, SiCoursera } from "react-icons/si";
 import { FaCode } from "react-icons/fa";
 
 interface Certificate {
@@ -13,7 +13,7 @@ interface Certificate {
   verificationUrl?: string;
   description: string;
   icon: React.ComponentType<{ className?: string }>;
-  category: "android" | "unity" | "design" | "general";
+  category: "android" | "unity" | "design" | "fullstack";
 }
 
 const certificates: Certificate[] = [
@@ -22,18 +22,18 @@ const certificates: Certificate[] = [
     title: "Java Full Stack Development",
     issuer: "EduSkills",
     issueDate: "2024",
-    verificationUrl: "#",
+    verificationUrl: "https://aictecert.eduskillsfoundation.org/pages/home/verify.php?cert=4acdeede2362f4d8a101d9136d65577c",
     description: "Comprehensive full stack development program covering Java backend development, web technologies, and modern development practices.",
     icon: FaCode,
-    category: "general"
+    category: "fullstack"
   },
   {
     id: 2,
     title: "C# Programming for Unity Game Development",
     issuer: "University of Colorado Colorado Springs",
     issueDate: "2024",
-    verificationUrl: "#",
-    description: "Specialized course focusing on C# programming fundamentals specifically for Unity game development, covering scripting, game mechanics, and object-oriented programming.",
+    verificationUrl: "https://www.coursera.org/account/accomplishments/specialization/IEBUN0645J7L",
+    description: "Specialized course focusing on C# programming fundamentals, covering scripting, game mechanics, and object-oriented programming.",
     icon: SiUnity,
     category: "unity"
   }
@@ -50,7 +50,7 @@ export default function CertificatesSection() {
         return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200";
       case "design":
         return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200";
-      case "general":
+      case "fullstack":
         return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200";
       default:
         return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200";
@@ -65,8 +65,8 @@ export default function CertificatesSection() {
         return "Unity";
       case "design":
         return "Design";
-      case "general":
-        return "General";
+      case "fullstack":
+        return "Full Stack";
       default:
         return "Certificate";
     }
@@ -111,16 +111,6 @@ export default function CertificatesSection() {
                     </span>
                   </div>
                 </div>
-                {certificate.verificationUrl && (
-                  <a
-                    href={certificate.verificationUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 transition-colors"
-                  >
-                    <FaExternalLinkAlt className="text-lg" />
-                  </a>
-                )}
               </div>
 
               <h3 className="text-xl font-bold font-poppins text-foreground mb-2">
