@@ -3,7 +3,7 @@ import { IconType } from "react-icons";
 import moodstoryImg from "@/assets/moodstory.png";
 import battleideImg from "@/assets/battleide.png";
 import somaImg from "@/assets/soma.png";
-import campusnavImg from "@/assets/campusNav.jpg";
+import campusnavImg from "@/assets/campusnav.jpg";
 
 
 export interface ProjectLink {
