@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
-import { FaAndroid, FaUnity, FaChevronDown } from "react-icons/fa";
-import { SiFigma } from "react-icons/si";
+import { FaChevronDown, FaJava, FaReact } from "react-icons/fa";
+import { SiPython } from "react-icons/si";
 import profileImg from "@/assets/profile.jpg";
 
 export default function HeroSection() {
@@ -35,7 +35,7 @@ export default function HeroSection() {
                 transition={{ delay: 0.5, type: "spring" }}
                 className="absolute -bottom-4 -right-4 bg-card p-3 rounded-full shadow-lg"
               >
-                <FaAndroid className="text-3xl text-primary" />
+                <FaReact className="text-3xl text-primary" />
               </motion.div>
               
               <motion.div
@@ -44,7 +44,7 @@ export default function HeroSection() {
                 transition={{ delay: 0.7, type: "spring" }}
                 className="absolute -top-4 -left-4 bg-card p-3 rounded-full shadow-lg"
               >
-                <FaUnity className="text-3xl text-primary" />
+                <FaJava className="text-3xl text-primary" />
               </motion.div>
               
               <motion.div
@@ -53,12 +53,20 @@ export default function HeroSection() {
                 transition={{ delay: 0.9, type: "spring" }}
                 className="absolute -top-4 -right-4 bg-card p-3 rounded-full shadow-lg"
               >
-                <SiFigma className="text-3xl text-primary" />
+                <SiPython className="text-3xl text-primary" />
               </motion.div>
             </div>
           </div>
           
           <div className="md:w-1/2 mb-10 md:mb-0">
+            <motion.p
+              className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              Recent 2026 Graduate | Full-Stack Developer
+            </motion.p>
             <motion.h1 
               className="text-4xl md:text-5xl lg:text-6xl font-bold font-poppins mb-4 text-foreground"
             >
@@ -84,7 +92,7 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
             >
-              UI Designer & Developer specializing in visually polished interfaces and interactive design systems, with additional experience in Android & Unity app development and full-stack web development.
+              I build applications with Java, Python, and React.
             </motion.p>
             <motion.div 
               className="flex flex-wrap gap-4 justify-center md:justify-start"

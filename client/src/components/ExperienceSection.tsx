@@ -22,28 +22,28 @@ const experiences: Experience[] = [
     duration: "May 2025 - Present",
     type: "internship",
     description: [
-      "Design and engineer robust, reusable frontend modules to improve UI performance, responsiveness, and visual consistency.",
-      "Collaborate within Agile teams on high-impact products, translating design requirements into polished, end-to-end user interfaces.",
-      "Integrate AI-powered workflows into frontend experiences, transforming prototypes into production-ready, user-facing features.",
-      "Refactor legacy UI components into modular, scalable structures, reducing code duplication by 70% and improving maintainability."
+      "Developed frontend features in React and integrated Python-based LLM API workflows to implement AI-powered proof of concepts.",
+      "Refactored code into reusable modules, reducing redundancy and improving maintainability across the codebase.",
+      "Collaborated with team members on code reviews, debugging, and deployment to keep releases smooth and reliable.",
+      "Turned scoped product requirements into polished, end-to-end features with a focus on clarity and speed.",
     ],
-    technologies: ["React", "Figma", "Python", "MongoDB", "Git" ]
+    technologies: ["React", "Python", "LLM APIs", "MongoDB", "Git"],
   },
   {
     id: 2,
     title: "UI/UX Design Intern",
-    company: "ADM Education and welfare Society",
+    company: "ADM Education and Welfare Society",
     location: "Remote",
-    duration: "June 2025 - July 2024",
+    duration: "Summer 2024",
     type: "internship",
     description: [
-      "Designed user interfaces for mobile applications and websites",
-      "Conducted user research and created user personas",
-      "Created wireframes, prototypes, and high-fidelity designs",
-      "Collaborated with developers to ensure design implementation"
+      "Designed wireframes and high-fidelity screens for mobile and web products with a strong focus on clarity and usability.",
+      "Validated user flows and interaction patterns to make handoff smoother for developers and reduce implementation ambiguity.",
+      "Collaborated with stakeholders to iterate quickly on feedback and improve the final experience before release.",
+      "Created design documentation and reusable patterns to support faster product development.",
     ],
-    technologies: ["Figma", "User Research", "Prototyping", "Wireframing", "User Flows" ]
-  }
+    technologies: ["Figma", "Wireframing", "Prototyping", "User Research", "User Flows"],
+  },
 ];
 
 export default function ExperienceSection() {
@@ -90,7 +90,8 @@ export default function ExperienceSection() {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
           <p className="text-foreground/70 mt-4 max-w-2xl mx-auto">
-            My journey in software development, game creation, and design
+            My journey in software development, product design, and AI-assisted
+            feature delivery
           </p>
         </div>
 
@@ -103,14 +104,12 @@ export default function ExperienceSection() {
               transition={{ delay: index * 0.2, duration: 0.6 }}
               className="relative mb-12 last:mb-0"
             >
-              {/* Timeline line */}
               {index !== experiences.length - 1 && (
                 <div className="absolute left-8 top-16 w-0.5 h-32 bg-primary/30 hidden md:block"></div>
               )}
-              
-              {/* Timeline dot */}
+
               <div className="absolute left-6 top-8 w-4 h-4 bg-primary rounded-full hidden md:block border-4 border-background"></div>
-              
+
               <div className="bg-card rounded-lg shadow-lg p-6 md:ml-16 border border-border hover:shadow-xl transition-shadow duration-300">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div className="mb-4 md:mb-0">
@@ -118,7 +117,11 @@ export default function ExperienceSection() {
                       <h3 className="text-xl font-bold font-poppins text-foreground">
                         {experience.title}
                       </h3>
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(experience.type)}`}>
+                      <span
+                        className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(
+                          experience.type
+                        )}`}
+                      >
                         {getTypeLabel(experience.type)}
                       </span>
                     </div>
@@ -137,20 +140,22 @@ export default function ExperienceSection() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="mb-4">
                   <ul className="space-y-2">
                     {experience.description.map((item, i) => (
                       <li key={i} className="text-foreground/80 flex items-start">
-                        <span className="text-primary mr-2 mt-1.5">•</span>
+                        <span className="text-primary mr-2 mt-1.5">-</span>
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                
+
                 <div>
-                  <h4 className="text-sm font-medium text-foreground mb-2">Technologies Used:</h4>
+                  <h4 className="text-sm font-medium text-foreground mb-2">
+                    Technologies Used:
+                  </h4>
                   <div className="flex flex-wrap gap-2">
                     {experience.technologies.map((tech, i) => (
                       <span

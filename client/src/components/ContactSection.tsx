@@ -3,26 +3,26 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
-import { FaEnvelope, FaMapMarkerAlt, FaLinkedinIn, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 export default function ContactSection() {
   const { ref, isVisible } = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { id, value } = e.target;
-    setFormData(prev => ({ ...prev, [id]: value }));
+    setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
     console.log("Form data:", formData);
-    // Reset form after submission
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -41,21 +41,24 @@ export default function ContactSection() {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
           <p className="text-foreground/70 mt-4 max-w-2xl mx-auto">
-            Interested in working together? Let's connect and discuss your project!
+            If you are hiring for a scoped feature, product module, or full-stack
+            role, I would love to connect and talk through the work.
           </p>
         </div>
-        
+
         <div className="flex flex-col md:flex-row gap-12">
           <div className="md:w-1/2">
             <h3 className="text-2xl font-bold font-poppins text-foreground mb-6">
               Contact Information
             </h3>
-            
+
             <div className="mb-6">
               <p className="text-foreground/70 mb-6">
-                Feel free to reach out to me through any of the following channels. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                Reach out if you want someone who can own complete modules,
+                communicate clearly, and move fast with AI-assisted workflows
+                while still keeping the codebase clean and maintainable.
               </p>
-              
+
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
                   <FaEnvelope className="text-primary" />
@@ -63,14 +66,14 @@ export default function ContactSection() {
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
                   <a
-                    href="mailto:prajyot@example.com"
+                    href="mailto:prajyotgorlewar@gmail.com"
                     className="text-foreground hover:text-primary transition-colors"
                   >
                     prajyotgorlewar@gmail.com
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
                   <FaMapMarkerAlt className="text-primary" />
@@ -81,11 +84,11 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-            
+
             <h3 className="text-xl font-bold font-poppins text-foreground mb-4">
               Social Profiles
             </h3>
-            
+
             <div className="flex gap-4">
               <a
                 href="https://www.linkedin.com/in/prajyotgorlewar/"
@@ -101,7 +104,7 @@ export default function ContactSection() {
               </a>
             </div>
           </div>
-          
+
           <div className="md:w-1/2">
             <form
               onSubmit={handleSubmit}
@@ -110,7 +113,7 @@ export default function ContactSection() {
               <h3 className="text-2xl font-bold font-poppins text-card-foreground mb-6">
                 Send Me a Message
               </h3>
-              
+
               <div className="mb-4">
                 <label htmlFor="name" className="block text-card-foreground/80 mb-2">
                   Name
@@ -125,7 +128,7 @@ export default function ContactSection() {
                   required
                 />
               </div>
-              
+
               <div className="mb-4">
                 <label htmlFor="email" className="block text-card-foreground/80 mb-2">
                   Email
@@ -140,7 +143,7 @@ export default function ContactSection() {
                   required
                 />
               </div>
-              
+
               <div className="mb-6">
                 <label htmlFor="message" className="block text-card-foreground/80 mb-2">
                   Message
@@ -155,7 +158,7 @@ export default function ContactSection() {
                   required
                 />
               </div>
-              
+
               <Button
                 type="submit"
                 className="w-full bg-primary text-white py-3 rounded-md font-medium hover:bg-primary-hover transition-colors focus:ring-2 focus:ring-primary focus:ring-opacity-50"

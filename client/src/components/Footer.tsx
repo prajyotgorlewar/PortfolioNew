@@ -7,7 +7,7 @@ export default function Footer() {
             <a href="#home" className="text-xl font-bold font-inter">
               <span className="text-primary">Prajyot Gorlewar</span>
             </a>
-            <p className="text-muted-foreground dark:text-gray-400 mt-2">Software & UI Developer</p>
+            <p className="text-muted-foreground dark:text-gray-400 mt-2">Full-Stack Developer</p>
           </div>
           
           <div className="text-center md:text-right">

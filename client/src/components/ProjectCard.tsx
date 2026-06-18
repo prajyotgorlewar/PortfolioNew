@@ -22,7 +22,7 @@ export default function ProjectCard({ project, onOpenEmbed }: ProjectCardProps) 
         <div
           className={`absolute top-4 right-4 ${project.category === "android"
               ? "bg-primary"
-              : project.category === "mern"
+              : project.category === "fullstack"
                 ? "bg-emerald-600"
                 : "bg-accent"
             } text-white text-xs font-bold px-2 py-1 rounded`}

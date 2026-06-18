@@ -5,21 +5,19 @@ import battleideImg from "@/assets/battleide.png";
 import somaImg from "@/assets/soma.png";
 import campusnavImg from "@/assets/campusnav.jpg";
 
-
 export interface ProjectLink {
   icon: IconType;
   label: string;
-  url?: string;        // normal links (GitHub, website)
-  embedUrl?: string;   // embedded demos (LinkedIn, YouTube)
+  url?: string;
+  embedUrl?: string;
 }
-
 
 export interface Project {
   id: number;
   title: string;
   description: string;
   image: string;
-  category: "android" | "mern" | "ui";
+  category: "android" | "fullstack" | "ui";
   categoryLabel: string;
   tags: string[];
   links: ProjectLink[];
@@ -30,13 +28,11 @@ export const projects: Project[] = [
     id: 1,
     title: "Moodstory",
     description:
-      "A complete web application that detects user emotions from facial expressions and voice inputs and generates personalized, emotion-aware narratives in real time using multimodal AI and LLMs.",
+      "A full-stack web app that combines facial-expression and voice analysis with multimodal AI to generate personalized, emotion-aware stories in real time. Built with a Python FastAPI backend and a React frontend for an end-to-end product experience.",
     image: moodstoryImg,
-    category: "mern",
-    categoryLabel: "MERN",
-    tags: ["Python", "CNN", "LSTM", "LLM", "FastAPI", "React", "MongoDB", "Node.js", "Express"
-      
-    ],
+    category: "fullstack",
+    categoryLabel: "Full Stack",
+    tags: ["Python", "FastAPI", "React", "MongoDB", "CNN", "LSTM", "LLM"],
     links: [
       {
         icon: FaExternalLinkAlt,
@@ -51,16 +47,14 @@ export const projects: Project[] = [
       },
     ],
   },
-
-
-
   {
     id: 2,
     title: "BattleIDE",
-    description: "A real-time 1v1 competitive coding web platform featuring Elo-based matchmaking, live code battles with Monaco Editor, and secure automated evaluation via Judge0 and WebSockets.",
+    description:
+      "A real-time 1v1 competitive coding platform built to own the full product loop, from Elo-based matchmaking and live code battles to secure automated evaluation with Judge0 and WebSockets.",
     image: battleideImg,
-    category: "mern",
-    categoryLabel: "MERN",
+    category: "fullstack",
+    categoryLabel: "Full Stack",
     tags: ["React", "Node.js", "MongoDB", "WebSockets", "Judge0", "Monaco Editor"],
     links: [
       {
@@ -68,13 +62,13 @@ export const projects: Project[] = [
         label: "Live App",
         url: "https://battle-ide.vercel.app/",
       },
-    ]
-
+    ],
   },
   {
     id: 3,
     title: "SOMA",
-    description: "A high-fidelity meditation app UI prototype in Figma featuring guided audio session screens and a clean, intuitive progress-tracking interface.",
+    description:
+      "A high-fidelity meditation app UI prototype in Figma designed with guided audio sessions, a clean onboarding flow, and simple progress tracking.",
     image: somaImg,
     category: "ui",
     categoryLabel: "UI Design",
@@ -91,7 +85,8 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "CampusNav",
-    description: "An Android application built in Unity that enables indoor campus navigation without GPS, featuring a 3D avatar–based interface and real-time teacher tracking within a virtual campus environment.",
+    description:
+      "An Android application built in Unity that enables indoor campus navigation without GPS, featuring a 3D avatar-based interface and real-time teacher tracking inside a virtual campus environment.",
     image: campusnavImg,
     category: "android",
     categoryLabel: "Android App",
@@ -108,8 +103,6 @@ export const projects: Project[] = [
         embedUrl:
           "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7337895467621449730?compact=1",
       },
-    ]
-
+    ],
   },
-
 ];
